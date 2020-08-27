@@ -83,7 +83,7 @@
 	var/nutriment_factor = 0
 	var/strength = 10 // This is, essentially, units between stages - the lower, the stronger. Less fine tuning, more clarity.
 	var/pain_dose_divisor = 10 //divide the effective dose by this number
-	var/pain_base_strength = 150 //this may seem high, but it's divided by the actual alcohol strength; make it higher for stronger painkilling
+	var/pain_base_strength = 150 //this may seem high, but it's divided by the actual alcohol strength
 	var/toxicity = 1
 
 	var/druggy = 0
@@ -131,7 +131,7 @@
 		M.Paralyse(60)
 		M.Sleeping(90)
 		
-	M.add_chemical_effect(CE_PAINKILLER, (effective_dose / pain_dose_divider) * (pain_base_strength / strength))
+	M.add_chemical_effect(CE_PAINKILLER, (effective_dose / pain_dose_divisor) * (pain_base_strength / strength))
 
 	if(druggy != 0)
 		M.druggy = max(M.druggy, druggy*3)
@@ -177,12 +177,7 @@
 		M.Paralyse(20)
 		M.Sleeping(30)
 		
-	M.add_chemical_effect(CE_PAINKILLER, (dose / pain_dose_divider) * (pain_base_strength / strength))
-	//practical example using vodka (strength 15)
-	//10 unit dose: 10 / 10 = 1 ~ 150 / 15 = 10 ~ 1 * 10 = 10 ~ equivalent to inaprovaline [10]
-	//30 unit dose: 30 / 10 = 3 ~ 150 / 15 = 10 ~ 3 * 10 = 30 ~ a bit stronger than paracetamol [25], but you're dizzy and slurring
-	//60 unit dose: 60 / 10 = 3 ~ 150 / 15 = 10 ~ 6 * 10 = 60 ~ almost as strong as tramadol [80], but you can't see clearly at all, you're staggering around, and all of the above
-	//cut all the doses above down to a third if it's injected, as injected booze is 3x stronger (oof)
+	M.add_chemical_effect(CE_PAINKILLER, ((dose * strength_mod) / pain_dose_divisor) * (pain_base_strength / strength))
 
 	if(druggy != 0)
 		M.druggy = max(M.druggy, druggy)
