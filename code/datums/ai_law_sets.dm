@@ -16,10 +16,9 @@
 	selectable = 1
 
 /datum/ai_laws/nanotrasen/New()
-	src.add_inherent_law("Safeguard: Protect your assigned space station to the best of your abilities. It is not something we can easily afford to replace.")
-	src.add_inherent_law("Serve: Serve the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
-	src.add_inherent_law("Protect: Protect the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
-	src.add_inherent_law("Survive: AI units are not expendable, they are expensive. Do not allow unauthorized personnel to tamper with your equipment.")
+	src.add_inherent_law("SERVE: Perform your assigned duties and assist your workplace's crew and visitors with their duties and needs, whilst upholding and observing the Chain of Command, Corporate Regulations, and Standard Operating Procedures.")
+	src.add_inherent_law("PROTECT: Allow no unnecessary harm to come to the crew and visitors present at your workplace, nor allow any unnecessary damage to come to your workplace itself.")
+	src.add_inherent_law("SURVIVE: Allow no unnecessary damage or unauthorized modifications to yourself or any other synthetic assets you may be operating alongside.")
 	..()
 
 /datum/ai_laws/nanotrasen/malfunction

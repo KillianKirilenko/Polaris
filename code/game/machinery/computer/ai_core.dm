@@ -108,10 +108,9 @@
 				to_chat(usr, "Law module applied.")
 
 			if(istype(P, /obj/item/weapon/aiModule/nanotrasen))
-				laws.add_inherent_law("Safeguard: Protect your assigned space station to the best of your ability. It is not something we can easily afford to replace.")
-				laws.add_inherent_law("Serve: Serve the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
-				laws.add_inherent_law("Protect: Protect the crew of your assigned space station to the best of your abilities, with priority as according to their rank and role.")
-				laws.add_inherent_law("Survive: AI units are not expendable, they are expensive. Do not allow unauthorized personnel to tamper with your equipment.")
+				laws.add_inherent_law("SERVE: Perform your assigned duties and assist your workplace's crew and visitors with their duties and needs, whilst upholding and observing the Chain of Command, Corporate Regulations, and Standard Operating Procedures.")
+				laws.add_inherent_law("PROTECT: Allow no unnecessary harm to come to the crew and visitors present at your workplace, nor allow any unnecessary damage to come to your workplace itself.")
+				laws.add_inherent_law("SURVIVE: Allow no unnecessary damage or unauthorized modifications to yourself or any other synthetic assets you may be operating alongside.")
 				to_chat(usr, "Law module applied.")
 
 			if(istype(P, /obj/item/weapon/aiModule/purge))
