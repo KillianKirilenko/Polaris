@@ -590,6 +590,10 @@ var/list/floor_decals = list()
 	name = "loading area"
 	icon_state = "loadingarea"
 
+/obj/effect/floor_decal/industrial/direction_arrow
+	name = "direction arrow"
+	icon_state = "directionarrow"
+
 /obj/effect/floor_decal/plaque
 	name = "plaque"
 	icon_state = "plaque"
